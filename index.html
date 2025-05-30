@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대학교수를 위한 NotebookLM Q&A 도우미</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>대학교수를 위한 NotebookLM Q&A 도우미</h1>
+            <p class="header__description">구글 NotebookLM을 교육과 연구에 효과적으로 활용하는 방법을 알아보세요</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="form-control search-input" 
+                        placeholder="궁금한 내용을 검색해보세요..."
+                        autocomplete="off"
+                    >
+                    <div class="search-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="category-filters">
+                    <button class="btn btn--outline category-btn active" data-category="전체">전체</button>
+                    <button class="btn btn--outline category-btn" data-category="기본사용법">기본사용법</button>
+                    <button class="btn btn--outline category-btn" data-category="교육활용">교육활용</button>
+                    <button class="btn btn--outline category-btn" data-category="고급기능">고급기능</button>
+                    <button class="btn btn--outline category-btn" data-category="문제해결">문제해결</button>
+                    <button class="btn btn--outline category-btn" data-category="팁과요령">팁과요령</button>
+                </div>
+            </section>
+
+            <!-- Quick Access Questions -->
+            <section class="quick-access">
+                <h2>자주 묻는 질문</h2>
+                <div class="quick-questions">
+                    <button class="btn btn--secondary quick-question-btn" data-question="NotebookLM이 무엇인가요?">
+                        NotebookLM이 무엇인가요?
+                    </button>
+                    <button class="btn btn--secondary quick-question-btn" data-question="수업 자료 준비에 어떻게 활용할 수 있나요?">
+                        수업 자료 준비 활용법
+                    </button>
+                    <button class="btn btn--secondary quick-question-btn" data-question="AI 채팅 기능은 어떻게 사용하나요?">
+                        AI 채팅 기능 사용법
+                    </button>
+                    <button class="btn btn--secondary quick-question-btn" data-question="효과적인 질문 방법은?">
+                        효과적인 질문 방법
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="results-header">
+                    <h2 id="resultsTitle">모든 Q&A</h2>
+                    <span class="results-count" id="resultsCount"></span>
+                </div>
+                
+                <div class="results-grid" id="resultsGrid">
+                    <!-- Q&A cards will be dynamically inserted here -->
+                </div>
+                
+                <div class="no-results" id="noResults">
+                    <div class="no-results__content">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <h3>검색 결과가 없습니다</h3>
+                        <p>다른 키워드로 검색하거나 카테고리를 변경해보세요.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 NotebookLM Q&A 도우미. 대학교수를 위한 가이드.</p>
+            <div class="footer-links">
+                <a href="https://notebooklm.google.com" target="_blank">NotebookLM 공식 사이트</a>
+                <a href="https://support.google.com/notebooklm" target="_blank">공식 도움말</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
